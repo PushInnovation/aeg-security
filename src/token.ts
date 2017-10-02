@@ -1,6 +1,6 @@
 import * as nJwt from 'njwt';
 
-export interface IOrganization {
+export interface ITokenOrganization {
 	href: string;
 	nameKey: string;
 }
@@ -103,7 +103,7 @@ class Token {
 	/**
 	 * Parses the organization from a JWT token
 	 */
-	public static parseOrganizationFromJwt (jwt: any): IOrganization {
+	public static parseOrganizationFromJwt (jwt: any): ITokenOrganization {
 
 		return jwt.body.organization;
 
